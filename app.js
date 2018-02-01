@@ -36,8 +36,12 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
+var project = require('./routes/project');
+var index = require('./routes/index');
 app.get('/', index.view);
 app.get('/hello/:userName', hello.view);
+app.get('/', index.view);
+app.get('/project/:name', project.viewProject);
 // Example route
 // app.get('/users', user.list);
 
